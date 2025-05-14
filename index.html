@@ -3,34 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>EduTechna - Masa Depan Pendidikan Digital</title>
+  <title>RoboVerse - Masa Depan Dimulai di Sini</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- Navbar -->
   <nav>
-    <div class="logo">EduTechna</div>
+    <div class="logo">🤖 RoboVerse</div>
     <ul>
       <li><a href="#beranda">Beranda</a></li>
       <li><a href="#tentang">Tentang</a></li>
       <li><a href="#fitur">Fitur</a></li>
-      <li><a href="#testimoni">Testimoni</a></li>
-      <li><a href="#kontak">Kontak</a></li>
-      <li><button id="loginBtn">Login</button></li>
+      <li><a href="#video">Video</a></li>
+      <li><a href="#maps">Lokasi</a></li>
+      <li><a href="login.html" class="login-btn">Login</a></li>
     </ul>
   </nav>
 
-  <!-- Hero Section -->
-  <section id="beranda" class="hero">
-    <h1>Revolusi Pendidikan Digital Dimulai di Sini</h1>
-    <p>Platform pembelajaran interaktif untuk generasi masa depan.</p>
-  </section>
+  <!-- Hero -->
+  <header id="beranda" class="hero">
+    <h1>Selamat Datang di Masa Depan</h1>
+    <p>Platform AI & Robotika untuk Generasi Berikutnya</p>
+  </header>
 
   <!-- Tentang -->
   <section id="tentang">
-    <h2>Tentang EduTechna</h2>
-    <p>EduTechna adalah platform teknologi edukasi yang menggabungkan AI, gamifikasi, dan pembelajaran adaptif untuk meningkatkan hasil belajar siswa di seluruh Indonesia.</p>
+    <h2>Tentang RoboVerse</h2>
+    <p>RoboVerse adalah platform teknologi robotika dan AI. Kami percaya masa depan dimulai hari ini, dengan mesin yang membantu dan memahami manusia.</p>
   </section>
 
   <!-- Fitur -->
@@ -38,73 +38,45 @@
     <h2>Fitur Unggulan</h2>
     <div class="features">
       <div class="feature-box">
-        <h3>AI Personal Tutor</h3>
-        <p>Setiap siswa mendapat tutor AI yang bisa disesuaikan.</p>
+        <h3>Robot Pintar</h3>
+        <p>Melayani manusia dengan kecerdasan buatan.</p>
       </div>
       <div class="feature-box">
-        <h3>Gamifikasi</h3>
-        <p>Belajar jadi menyenangkan dengan elemen permainan.</p>
+        <h3>AI Analytics</h3>
+        <p>Menganalisis data dan memberikan prediksi cerdas.</p>
       </div>
       <div class="feature-box">
-        <h3>Analitik Cerdas</h3>
-        <p>Guru dapat memantau kemajuan belajar secara real-time.</p>
+        <h3>Autonomous Drone</h3>
+        <p>Terbang otomatis dan melakukan pengawasan.</p>
       </div>
     </div>
   </section>
 
-  <!-- Testimoni -->
-  <section id="testimoni">
-    <h2>Testimoni</h2>
-    <blockquote>
-      "Anak saya jadi lebih semangat belajar sejak pakai EduTechna. Terima kasih!"
-      <br><cite>— Ibu Sari, Orang Tua Murid</cite>
-    </blockquote>
-  </section>
-
-  <!-- Kontak -->
-  <section id="kontak">
-    <h2>Hubungi Kami</h2>
-    <p>Email: info@edutechna.id | Telp: +62 811 9999 8888</p>
-  </section>
-
-  <!-- Login Modal -->
-  <div id="loginModal" class="modal hidden">
-    <div class="modal-content">
-      <span id="closeModal">&times;</span>
-      <h2>Login</h2>
-      <form id="loginForm">
-        <input type="text" id="username" placeholder="Username" required>
-        <input type="password" id="password" placeholder="Password" required>
-        <button type="submit">Masuk</button>
-      </form>
+  <!-- Video -->
+  <section id="video">
+    <h2>Video Robot Masa Depan</h2>
+    <div class="video-container">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/4Md5j9r8Yho" 
+        title="YouTube video" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
     </div>
-  </div>
+  </section>
 
-  <!-- Footer -->
+  <!-- Maps -->
+  <section id="maps">
+    <h2>Lokasi Kantor Kami</h2>
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1982.973992663424!2d106.82720053657282!3d-6.1753922657595475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5c3e3b1607d%3A0x401e8f1fc28c9d0!2sMonumen%20Nasional!5e0!3m2!1sid!2sid!4v1715661712301"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
   <footer>
-    <p>&copy; 2025 EduTechna. Semua Hak Dilindungi. | <a href="#">Kebijakan Privasi</a></p>
+    <p>&copy; 2025 RoboVerse | Powered by AI for Humanity</p>
   </footer>
 
-  <script>
-    const modal = document.getElementById("loginModal");
-    const loginBtn = document.getElementById("loginBtn");
-    const closeModal = document.getElementById("closeModal");
-    const loginForm = document.getElementById("loginForm");
-
-    loginBtn.onclick = () => modal.classList.remove("hidden");
-    closeModal.onclick = () => modal.classList.add("hidden");
-
-    loginForm.onsubmit = (e) => {
-      e.preventDefault();
-      const user = document.getElementById("username").value;
-      const pass = document.getElementById("password").value;
-      if (user && pass) {
-        alert("Login berhasil. Selamat datang, " + user + "!");
-        modal.classList.add("hidden");
-      } else {
-        alert("Mohon isi username dan password!");
-      }
-    };
-  </script>
 </body>
 </html>
