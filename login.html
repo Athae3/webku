@@ -2,30 +2,62 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Login - RoboVerse</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body class="login-page">
-
-  <div class="login-container">
-    <h2>Login RoboVerse</h2>
-    <form onsubmit="handleLogin(event)">
-      <input type="text" id="username" placeholder="Username" required />
-      <input type="password" id="password" placeholder="Password" required />
-      <button type="submit">Masuk</button>
-    </form>
-    <p><a href="index.html">← Kembali ke Beranda</a></p>
-  </div>
-
-  <script>
-    function handleLogin(e) {
-      e.preventDefault();
-      const user = document.getElementById('username').value;
-      alert('Selamat datang, ' + user + '!');
-      window.location.href = 'index.html';
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | RoboVerse</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0f2027;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: white;
     }
-  </script>
-
+    .login-box {
+      background-color: #1e1f2f;
+      padding: 40px;
+      border-radius: 10px;
+      width: 300px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+    .login-box h2 {
+      text-align: center;
+      color: #00e5ff;
+    }
+    .login-box input {
+      width: 100%;
+      padding: 10px;
+      margin: 15px 0;
+      border: none;
+      border-radius: 5px;
+    }
+    .login-box button {
+      width: 100%;
+      padding: 10px;
+      background-color: #00e5ff;
+      color: black;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .login-box a {
+      display: block;
+      text-align: center;
+      margin-top: 15px;
+      color: #00e5ff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h2>Login</h2>
+    <input type="text" placeholder="Nama pengguna" />
+    <input type="password" placeholder="Kata sandi" />
+    <button>Masuk</button>
+    <a href="index.html">← Kembali ke Beranda</a>
+  </div>
 </body>
 </html>
