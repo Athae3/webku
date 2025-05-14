@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Landing Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Navbar -->
+  <header class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-blue-600">MyPlatform</h1>
+      <nav class="space-x-6">
+        <a href="login.html" class="text-gray-700 hover:text-blue-600 font-medium">Login</a>
+        <a href="admin.html" class="text-gray-700 hover:text-blue-600 font-medium">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-blue-100 via-blue-200 to-blue-300 py-20">
+    <div class="max-w-6xl mx-auto text-center px-4">
+      <h2 class="text-5xl font-bold mb-6">Solusi Digital Modern</h2>
+      <p class="text-xl mb-8">Kelola data, pengguna, dan aktivitas sistem Anda dengan lebih efisien.</p>
+      <a href="login.html" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition">Mulai Sekarang</a>
+    </div>
+  </section>
+
+  <!-- Image Showcase -->
+  <section class="grid grid-cols-1 md:grid-cols-3 gap-6 px-6 py-16 max-w-6xl mx-auto">
+    <img src="https://source.unsplash.com/600x400/?technology" alt="Tech Image" class="rounded-lg shadow-lg hover:scale-105 transition" />
+    <img src="https://source.unsplash.com/600x400/?code" alt="Code Image" class="rounded-lg shadow-lg hover:scale-105 transition" />
+    <img src="https://source.unsplash.com/600x400/?dashboard" alt="Dashboard Image" class="rounded-lg shadow-lg hover:scale-105 transition" />
+  </section>
+
+  <!-- Feature Section -->
+  <section class="bg-gray-100 py-16">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 px-6">
+      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
+        <img src="https://source.unsplash.com/80x80/?shield" alt="Secure" class="mb-4" />
+        <h3 class="text-xl font-semibold mb-2">Keamanan Tinggi</h3>
+        <p>Autentikasi dan proteksi data terjamin.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
+        <img src="https://source.unsplash.com/80x80/?interface" alt="Admin" class="mb-4" />
+        <h3 class="text-xl font-semibold mb-2">Dashboard Admin</h3>
+        <p>Kontrol penuh terhadap pengguna dan aktivitas.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
+        <img src="https://source.unsplash.com/80x80/?responsive" alt="Responsive" class="mb-4" />
+        <h3 class="text-xl font-semibold mb-2">Tampilan Responsif</h3>
+        <p>Desain yang menyesuaikan semua ukuran layar.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="text-center py-20 bg-white">
+    <h3 class="text-3xl font-bold mb-4">Siap untuk memulai?</h3>
+    <p class="mb-6">Login ke sistem atau akses dashboard admin.</p>
+    <div class="space-x-4">
+      <a href="login.html" class="bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700 transition">Login</a>
+      <a href="admin.html" class="bg-gray-700 text-white px-5 py-2 rounded hover:bg-gray-800 transition">Admin</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-50 py-6 text-center text-gray-500">
+    &copy; 2025 MyPlatform. All rights reserved.
+  </footer>
+
+</body>
+</html>

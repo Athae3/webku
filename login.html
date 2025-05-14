@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Naruto</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
+      overflow: hidden;
+    }
+
+    .background {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://wallpapercave.com/wp/wp9769332.jpg');
+      background-size: cover;
+      background-position: center;
+      filter: blur(8px);
+      z-index: -1;
+    }
+
+    .login-box {
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 15px;
+      padding: 40px 30px;
+      width: 100%;
+      max-width: 360px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.5);
+      color: white;
+      text-align: center;
+    }
+
+    .login-box img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #ffcc70;
+      margin-bottom: 20px;
+    }
+
+    .login-box h2 {
+      margin-bottom: 30px;
+    }
+
+    .input-box {
+      position: relative;
+      margin-bottom: 25px;
+      text-align: left;
+    }
+
+    .input-box input {
+      width: 100%;
+      padding: 10px;
+      background: transparent;
+      border: none;
+      border-bottom: 2px solid white;
+      outline: none;
+      color: white;
+      font-size: 16px;
+    }
+
+    .input-box label {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      color: #ccc;
+      transform: translateY(-50%);
+      pointer-events: none;
+      transition: 0.3s ease;
+    }
+
+    .input-box input:focus ~ label,
+    .input-box input:valid ~ label {
+      top: -10px;
+      font-size: 12px;
+      color: #1679eb;
+    }
+
+    .remember-forgot {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .remember-forgot a {
+      color: #52cfe6;
+      text-decoration: none;
+    }
+
+    .remember-forgot a:hover {
+      text-decoration: underline;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #67b1e2;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background: #3a95be;
+    }
+
+    .register-link {
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    .register-link a {
+      color: #7fb5fd;
+      text-decoration: none;
+    }
+
+    .register-link a:hover {
+      text-decoration: underline;
+    }
+
+    @media screen and (max-width: 400px) {
+      .login-box {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="background"></div>
+  <div class="login-box">
+    <h2>Masuk ke Dunia Shinobi</h2>
+    <form onsubmit="return loginUser(event)">
+      <div class="input-box">
+        <input type="text" id="username" required />
+        <label>Nama Ninja</label>
+      </div>
+      <div class="input-box">
+        <input type="password" id="password" required />
+        <label>Kata Sandi Rahasia</label>
+      </div>
+      <div class="remember-forgot">
+        <label><input type="checkbox" /> Ingat saya</label>
+        <a href="#">Lupa kata sandi?</a>
+      </div>
+      <button type="submit">Masuk</button>
+      <div class="register-link">
+        <p>Belum punya akun? <a href="#">Gabung dengan Desa Konoha</a></p>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    function loginUser(event) {
+      event.preventDefault();
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      if (username !== "" && password !== "") {
+        localStorage.setItem("loggedIn", "true");
+        window.location.href = "admin.html";
+      } else {
+        alert("Mohon isi semua kolom untuk masuk.");
+      }
+    }
+  </script>
+</body>
+</html>
